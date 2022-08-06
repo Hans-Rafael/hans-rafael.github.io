@@ -54,11 +54,8 @@
                 aqui les presento algunos de mis proyectos
             </p>
             <div >
-                <!-- include php from /php/pf.php -->
                 <?php include ('php/pf.php'); ?>
-            </div>
-                
-            
+            </div> 
             <div class="portfolio-row">
                 <a href="#"><img src="/img/pf.png" alt="" /></a>
                 <a href="#"><img src="/img/PDogs.png" alt="" /></a>
