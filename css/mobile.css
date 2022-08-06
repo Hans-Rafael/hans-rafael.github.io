@@ -17,7 +17,15 @@
 #navbar ul li a {
 	padding: 15px;
 }
-
+.navigation {
+	position: fixed;
+	display: grid;
+	top:auto;
+	right: 5%;
+	font-weight: bold;
+	font-size: 1rem;
+	
+}
 /* Showcase */
 #showcase {
 	padding: 0;

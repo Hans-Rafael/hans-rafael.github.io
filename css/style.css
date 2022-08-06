@@ -160,6 +160,7 @@ form .form-control {
 .showcase-row {
 	display: flex;
 	padding: 150px 0;
+	gap: 2rem;
 }
 
 .showcase-row-title p.large {
@@ -201,6 +202,24 @@ form .form-control {
 
 #about p {
 	padding-bottom: 20px;
+}
+/*SKILLS*/
+.skill-title {
+	/* font-size: 1.5rem;
+	font-weight: bold; */
+	padding-bottom: 10px;
+	text-align: center;
+	padding-top: 80px;
+}
+.skills-row{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+.skills-row-item{
+	width: 30%;
 }
 
 /* Contact */
