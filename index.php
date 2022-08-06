@@ -53,6 +53,11 @@
             <p>
                 aqui les presento algunos de mis proyectos
             </p>
+            <?php
+ECHO "Hello World!<br>";
+echo "Hello World!<br>";
+EcHo "Hello World!<br>";
+?>
             <div >
                 <!-- include php from /php/pf.php -->
                 <?php include ('php/pf.php'); ?>
