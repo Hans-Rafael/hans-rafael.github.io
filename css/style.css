@@ -202,6 +202,16 @@ form .form-control {
 .center {
 	text-align: center;
 }
+.links {
+		text-align: center;
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 5%;
+		align-content: stretch;
+		align-items: center;
+		justify-items: center;
+		justify-content: center;
+}
 
 #contact h2 {
 	text-align: center;
