@@ -189,6 +189,16 @@ form .form-control {
 	padding: 10px;
 	border-radius: 20px;
 }
+.project-text {
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	font-style: italic;
+	text-align:left;
+}
+.span-text-p{
+	font-style: italic;
+}
 
 /* About Me */
 #about {
@@ -202,6 +212,16 @@ form .form-control {
 
 #about p {
 	padding-bottom: 20px;
+}
+.project-text-aboutMe{
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	text-align:left;
+	font-style :inherit;
+	font-size: medium;
+	line-height: 2em;
+	text-indent: 2em;
 }
 /*SKILLS*/
 .skill-title {
@@ -278,6 +298,15 @@ form .form-control {
 
 .contact-row-form button {
 	width: 100%;
+}
+.clipboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+	padding: 1.5em;	
 }
 
 /* Footer */
