@@ -9,6 +9,35 @@
 }
 
 /* Navbar */
+.collapsible {
+	position: relative;
+    left: 66px;
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 50%;
+	border-radius: 12%;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+	background-color: #555;
+}
+
+.content {
+	max-height: 0;
+	overflow: hidden;
+	transition:  0.2s ease-out;
+	background-color: #f1f1f1;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/********/
 #navbar .logo {
 	float: none;
 	text-align: center;
@@ -25,7 +54,19 @@
 	font-weight: bold;
 	font-size: 1rem;
 	
+} 
+/*desplegable manu*/
+.navigation .navbar-toggler {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	border: 0;
+	background: transparent;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
+
 /* Showcase */
 #showcase {
 	padding: 0;
@@ -98,4 +139,15 @@
 .contact-row-form {
 	width: 100%;
 	padding: 10px;
+}
+.copy {
+    text-align: center;
+    display: flex;
+    gap: 2%;
+    padding-bottom: 30px;
+    justify-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
 }
