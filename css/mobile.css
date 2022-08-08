@@ -1,153 +1,152 @@
 /* Utility Classes */
 .display-1 {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 /* Mainheader */
 #mainheader {
-	height: 100%;
+  height: 100%;
 }
 
 /* Navbar */
-.collapsible {
-	position: relative;
+  .collapsible {
+    position: relative;
     left: 66px;
-	background-color: #777;
-	color: white;
-	cursor: pointer;
-	padding: 18px;
-	width: 50%;
-	border-radius: 12%;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-}
+    background-color: rgb(61, 125, 150);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border-radius: 12%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
 
 .active,
 .collapsible:hover {
-	background-color: #555;
+  background-color: rgb(30, 169, 155);
 }
 
 .content {
-	max-height: 0;
-	overflow: hidden;
-	transition:  0.2s ease-out;
-	background-color: #f1f1f1;
-	display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 /********/
 #navbar .logo {
-	float: none;
-	text-align: center;
+  float: none;
+  text-align: center;
 }
 
 #navbar ul li a {
-	padding: 15px;
+  padding: 15px;
 }
 .navigation {
-	position: fixed;
-	display: grid;
-	top:auto;
-	right: 5%;
-	font-weight: bold;
-	font-size: 1rem;
-	
-} 
+  position: fixed;
+  display: grid;
+  top: auto;
+  right: 5%;
+  font-weight: bold;
+  font-size: 1rem;
+}
 /*desplegable manu*/
 .navigation .navbar-toggler {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 1;
-	border: 0;
-	background: transparent;
-	font-size: 1.5rem;
-	cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  border: 0;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Showcase */
 #showcase {
-	padding: 0;
-	text-align: center;
+  padding: 0;
+  text-align: center;
 }
 
 .showcase-row {
-	flex-wrap: wrap;
-	padding: 20px 0;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 
 .showcase-row-img img {
-	width: 100%;
-	padding-top: 40px;
+  width: 100%;
+  padding-top: 40px;
 }
 
 /* Portfolio */
 #portfolio {
-	padding-top: 80px;
-	padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 #portfolio p {
-	width: 100%;
+  width: 100%;
 }
 
 /* About Me */
 #about {
-	padding-top: 80px;
-	padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 #about h2 {
-	padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #about p {
-	padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 /* Contact */
 #contact {
-	padding-top: 80px;
-	padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 #contact p {
-	width: 100%;
+  width: 100%;
 }
 
 .contact-row {
-	flex-wrap: wrap;
-	padding: 0;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .contact-row-img {
-	width: 100%;
+  width: 100%;
 }
 
 .contact-row-img img {
-	padding: 0;
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 70px;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 70px;
 }
 
 .contact-row-form {
-	width: 100%;
-	padding: 10px;
+  width: 100%;
+  padding: 10px;
 }
 .copy {
-    text-align: center;
-    display: flex;
-    gap: 2%;
-    padding-bottom: 30px;
-    justify-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
+  text-align: center;
+  display: flex;
+  gap: 2%;
+  padding-bottom: 30px;
+  justify-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
 }

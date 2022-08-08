@@ -108,6 +108,13 @@ form .form-control {
 }
 
 /* Navbar */
+@media screen and (min-width: 769px) {
+  .collapsible {
+    width: 100%;
+    display: none;
+  }   
+}
+
 #navbar {
   color: #fff;
   overflow: auto;
