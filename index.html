@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" media="screen and (max-width:768px)" href="/css/mobile.css" />
     <title>My Portfolio | Welcome</title>
+    <!--  -->
+    <style>
+        
+    </style>
+    <!--  -->
 </head>
 
 <body>
@@ -15,13 +20,19 @@
         <nav id="navbar">
             <div class="container">
                 <h1 class="logo"><a href="#mainheader">My Portfolio</a></h1>
-                <ul class="navigation">
-                    <li><a href="#mainheader">Home</a></li>
-                    <li><a href="#portfolio">My Portfolio</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#ability">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div>
+
+                    <ul class="navigation">
+                        <button class="collapsible">Menu</button>
+                        <div class="content"   >
+                            <li><a href="#mainheader">Home</a></li>
+                            <li><a href="#portfolio">My Portfolio</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#ability">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div id="showcase">
@@ -45,6 +56,24 @@
                 </div>
             </div>
         </div>
+        <!--  -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+
     </header>
 
     <section id="portfolio">
@@ -234,6 +263,13 @@
                 Muchas gracias por visitar mi sitio web. te invito a que me contactes para que puedas conocerme y poder
                 trabajar conmigo.
             </p>
+            <script src="/js/clipboard.js"></script>
+            <div id="clipboard" class="copy">
+                <input id="myInput" type="text" name="inputname" value="hansvekoni@gmail.com" disabled>
+                <button type="button" onclick="myFunction()" id="on">Copiar</button>
+                <input id="myInput2" type="text" name="inputname" value="+541169076296" disabled>
+                <button type="button" onclick="myTlfFunction()" id="cop">Copiar</button>
+            </div>
             <div id="contactame" class="center">
                 <a href="mailto:hansvekoni@gmail.com?Subject=Interesado%20en%20Contactarte%20para%20una%20entrevista">
                     <h3>Link para escribirme a hansvekoni@gmail.com</h3>
@@ -258,14 +294,6 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
                             alt="Hans-Rafael Github link" width="40" height="40" />
                     </a>
-                </div>
-                <br>
-                <script src="/js/clipboard.js"></script>
-                <div id="clipboard" class="clipboard">
-                    <input id="myInput" type="text" name="inputname" value="hansvekoni@gmail.com" disabled>
-                    <button type="button" onclick="myFunction()" id="on">Copiar</button>
-                    <input id="myInput2" type="text" name="inputname" value="+541169076296" disabled>
-                    <button type="button" onclick="myTlfFunction()" id="cop">Copiar</button>
                 </div>
             </div>
         </div>
