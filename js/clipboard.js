@@ -9,25 +9,42 @@ function myFunction() {
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
   var uno = document.getElementById("on");
-  if(uno.innerHTML == "Copiar"){
-      uno.innerHTML = "Copiado";
-  }else {
-      uno.innerHTML = "Copiar";
+  if(uno.innerHTML == "Copiar/copy"){
+      uno.innerHTML = "Copiar/copy";
+  } else {
+      uno.innerHTML = "Copiado/copied";
   }
 } 
-function myTlfFunction() {
+function myFunction2() {
   /* Get the text field */
-  var copyText = document.getElementById("myInput2");
+  var copyText = document.getElementById("myInput");
   /* Select the text field */
   copyText.select();
   /* Copy the text inside the text field */
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
-  var uno = document.getElementById("cop");
-  if(uno.innerHTML == "Copiar"){
-      uno.innerHTML = "Copiado";
+  var uno = document.getElementById("on2");
+  if(uno.innerHTML == "Copiar/copy"){
+      uno.innerHTML = "Copiar/copy";
+  } else {
+      uno.innerHTML = "Copiado/copied";
+  }
+} 
+
+function myTlfFunction() {
+  /* Get the text field */
+  var copyInf = document.getElementById("myInput2");
+  /* Select the text field */
+  copyInf.select();
+  /* Copy the text inside the text field */
+  copyInf.setSelectionRange(0, 99999); /*For mobile devices*/
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyInf.value);
+  var un = document.getElementById("cop"); 
+  if(un.innerHTML == "Copiar/copy"){
+      un.innerHTML = "Copiado/copied";
   }else {
-      uno.innerHTML = "Copiar";
+      un.innerHTML = "Copiado/copied";
   }
 } 

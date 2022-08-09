@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width:769px)" href="/css/mobile.css" />
+    <title>My Portfolio | Welcome</title>
+
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="#mainheader">My Portfolio</a></h1>
+                <div>
+
+                    <ul class="navigation">
+                        <button class="collapsible">Menu</button>
+                        <div class="content">
+                            <li><a href="/index.html"><img src="/img/Spain.png" alt="Ir a Castellano" width="30rem"
+                                        height="30rem" /></a></li>
+                            <li><a href="#mainheader">Home</a></li>
+                            <li><a href="#portfolio">My Portfolio</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#ability">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="showcase">
+            <div class="container">
+                <div class="showcase-row">
+                    <div class="showcase-row-title">
+                        <p>Designer, Developer, Creative</p>
+                        <h1 class="display-1">
+                            Full Stack<br /><span class="txt-orange">Web Developer</span>
+                        </h1>
+                        <p class="large">
+                            <!-- Lorem ipsum,
+                             dolor sit amet consectetur adipisicing elit.
+								Repellendus eum nam quasi tempora. Laboriosam, dolores. -->
+                        </p>
+                        <a href="#portfolio" class="btn btn-round btn-dark">My Portfolio</a>
+                    </div>
+                    <div class="showcase-row-img">
+                        <img src="/img/YoArgCir.png" alt="Imagen de Hans-Garcia" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+
+            <h2>My Portfolio</h2>
+            <br>
+            <!--href="https://www.youtube.com/watch?v=eQ-MdQsoIGs"-->
+            <div class="portfolio-row">
+                <div id="project-text" class="project-text">
+                    <h3>Vlixes e-commerce Sport Shop</h3><br>
+                    This application is an e-commerce of sportswear.
+                    The idea is that users can buy sports clothes and then they can see the shopping cart.
+
+                    <br><b>Technologies: </b><br>
+
+                    - For the <span class="span-text-p">interface:</span> TypeScript - React - Redux - CSS Modules -
+                    Sass
+                    <br>
+                    - For the <span class="span-text-p">backend:</span> Node.js - Express.js - Sequelize - Stripe
+                    <br>
+                    - The <span class="span-text-p">database:</span> PostgreSQL
+                    <br>
+                    - The <span class="span-text-p">deployed:</span> Heroku (back) y Vercel (front)
+                    <br>
+                    <div class="bproject">you can try the app<a href="https://sport-shop-client.vercel.app/"
+                            class="button"><b>here.</b></a><br></div>
+                    <!-- O ver un video explicativo de 3 min al hacer click en la imagen. -->
+
+                </div>
+                <a href="https://github.com/Hans-Rafael/Henry-Final-project"><img src="/img/Pf.png"
+                        alt="pf de henry, e-commerce" /></a>
+
+            </div>
+            <div class="portfolio-row">
+                <div class="project-text">
+                    <h3>Henry's Dogs</h3><br>
+                    Application in which you can see different dog breeds along with relevant information about them
+                    using the external api [the dog api](https://thedogapi.com/) and from it you can,
+                    among other things:
+                    <br>
+                    - search for a dog breed
+                    - Filter / sort the dogs
+                    - add new dogs breed to the data base
+                    <br>
+                    <b>Main Technologies:</b>
+                    <br>
+                    - React
+                    - Redux
+                    - Express
+                    - Sequelize - Postgres.
+                    <br>
+                    <div class="bproject">for test the app go<a href="https://puppy-dog-client.vercel.app/"
+                            class="button"><b>here.</b></a></div><br>
+                    <!-- O ver un video explicativo de 3 min al hacer click en la imagen. -->
+                </div>
+                <a href="https://github.com/Hans-Rafael/PI-Dogs"><img src="/img/PDogs.png"
+                        alt="proyecto individual" /></a>
+            </div>
+            <div class="portfolio-row">
+                <div class="project-text">
+                    <h3> Wheather App</h3>
+                    Application that thanks to the information obtained from the api
+                    (https://openweathermap.org) it is possible to search for a city
+                    and obtain weather data which is used to render charts with the
+                    temperature and cloudiness values of the same with a small icon
+                    reflecting the current state.
+                    <br>
+                    <b>Employed technologies:</b>
+                    <br>
+                    -javaScript <br>
+                    -react<br>
+                    -css<br>
+                    -html<br>
+                    -react-dom<br>
+                    -react-scripts<br>
+                </div>
+                <a href="https://github.com/Hans-Rafael/WheatherApp"><img src="/img/PClima.png" alt="" /></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About me</h2>
+            <div class="project-text-aboutMe">
+                <br>
+                I am a Full Stack developer with a Back-End orientation,
+                with the ability to execute projects as a team or individually,
+                always thinking that they must be modular and scalable.
+
+                <br>
+                I love working with frameworks and libraries that allow me
+                create solutions that are efficient and safe.
+                <br>
+                I have training in HTML, CSS, JavaScript, Git,
+                React, Redux, NodeJs, Express, SQL databases with PostgreSQL,
+                payment check-out with Stripe, email, chat-bot.
+                <br>
+                Although I worked for years in the gastronomic and hotel environment,
+                from waiter, to supervisor, restaurants and event hall managers.
+                The world of programming had always caught my attention and with the pandamia I met again
+                with the programming and the best thing is that it always fills my interest to learn something new every
+                day.
+
+                <br>
+                So how about we start with something new and <a
+                    href="mailto:hansvekoni@gmail.com?Subject=Interesado%20en%20Contactarte%20para%20una%20entrevista"><b>Contact
+                        me!</b></a>
+                <br>
+                <ul id="mi_parrafo">
+                    <li>Hans Garcia Full Stack Web Developer</li>
+                    <li> hansvekoni@gmail.com</li>
+                </ul>
+                <button type="button" onclick="myFunction()" id="on" class="btn-copy">copy</button>
+            </div>
+            <!--  <div id="cv-descarga"><button class="glow" type="button">descarga CV / Download CV</button></div> -->
+        </div>
+    </section>
+
+    <section id="ability">
+        <div class="container">
+            <h2 class="skill-title">Skills</h2>
+            <!--  <p>
+                Aqui explico mis habilidades
+            </p> -->
+            <div class="skills-row">
+                <div class="skills-row-item">
+                    <h3>HTML</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                        alt="html5" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>CSS</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+                        alt="css3" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>javascript.</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                        alt="javascript" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>NodeJS</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                        alt="nodejs" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>React</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                        alt="react" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>Babel</h3>
+                    <img src="https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg" alt="babel" width="40"
+                        height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3> Redux </h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+                        alt="redux" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3> Postgresql</h3>
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                        alt="postgresql" width="40" height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3> Postman</h3>
+                    <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40"
+                        height="40" class="skill-icon" />
+                </div>
+                <div class="skills-row-item">
+                    <h3>Git</h3>
+                    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40"
+                        height="40" class="skill-icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2><a href="mailto:hansvekoni@gmail.com?Subject=Interesado%20en%20Contactarte%20para%20una%20entrevista">
+                    Contact Me</a></h2>
+            <p>
+                Thank you very much for visiting my website. I invite you to contact me so you can get to know me and be able to
+                 Work with me.
+            </p>
+            <script src="/js/clipboard.js"></script>
+            <div id="clipboard" class="copy">
+                <input id="myInput" type="text" name="inputname" value="hansvekoni@gmail.com" disabled>
+                <button type="button" onclick="myFunction2()" id = "on2" class="btn-copy">Copy</button>
+                <input id="myInput2" type="text" name="inputname" value="+541169076296" disabled>
+                <button type="button" onclick="myTlfFunction()" id = "cop" class="btn-copy">Copy</button>
+            </div>
+            <div id="contactame" class="center">
+                <a href="mailto:hansvekoni@gmail.com?Subject=Interesado%20en%20Contactarte%20para%20una%20entrevista">
+                    <h3>you can write to me hansvekoni@gmail.com</h3>
+                </a>
+                <br> </br>
+                <a href="mailto:hansvekoni@gmail.com?Subject=Interesado%20en%20Contactarte%20para%20una%20entrevista">
+                    <img src="/img/contact.png" alt="Enlace para escribirme" class="email-link-icon" />
+                </a>
+
+            </div>
+            <div class="container">
+                <p class="center"><b> Other links: </b> </p>
+                <div class="links">
+                    <a href="https://linkedin.com/in/hans-garcia-developer" class="twitter-follow-button"
+                        data-show-count="false">
+                        linkedin hans
+                        <img src="https://img.freepik.com/free-psd/glowing-linkedin-logo-realistic-3d-circle_125540-2102.jpg?w=2000"
+                            alt="Hans-Rafael Linkedin" width="40" height="40" />
+                    </a>
+                    <a href="https://github.com/Hans-Rafael " class="twitter-follow-button" data-show-count="false">
+                        Git hans-rafael
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                            alt="Hans-Rafael Github link" width="40" height="40" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="mainfooter">
+
+        <a href="#">back to the top
+            <img src="https://aclogasir13.neocities.org/img/subir.png" alt="Hans-Rafael Github link" width="40"
+                height="40" />
+        </a>
+        <p>
+            &copy; 2022-Developed by Hans Garcia
+        </p>
+    </footer>
+</body>
+
+</html>
