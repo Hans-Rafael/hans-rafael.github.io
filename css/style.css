@@ -261,7 +261,7 @@ form .form-control {
   padding: 180px 0;
   text-align: center;
   background-color: aqua;
-  border-radius: 45% 15%;
+  border-radius: 45% 0%;
 }
 
 #about h2 {
