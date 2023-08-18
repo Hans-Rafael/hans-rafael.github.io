@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" media="screen and (max-width:769px)" href="/css/mobile.css" />
+    <link rel="stylesheet" href="/scss/app.css" />
+    <script defer src="/js/app.js"></script>
     <title>My Portfolio | Welcome</title>
 
 </head>
@@ -80,7 +82,7 @@
 
             <h2>My Portfolio</h2>
             <p>
-            <h3> Aqui les presento algunos de mis proyectos </h3>
+            <h3> Aqui algunos de mis proyectos </h3>
             </p>
             <!--href="https://www.youtube.com/watch?v=eQ-MdQsoIGs"-->
             <div class="portfolio-row">
@@ -99,11 +101,16 @@
                     - En la <span class="span-text-p">base de datos:</span> PostgreSQL
                     <br>
                     - El <span class="span-text-p">deployado:</span> Heroku (back) y Vercel (front)
-                    <br>
+                    <br><br>
+                    <div class="bproject"><b>Video corto explicativo de 3 min</b>
+                        <a href="https://www.youtube.com/watch?v=eQ-MdQsoIGs"class="button">
+                            <b>Aqui!</b>
+                        </a><br>
+                    </div>
                     <div class="bproject">puedes jugar con la app <a href="https://sport-shop-client.vercel.app/"
                             class="button"><b>Aqui!</b></a><br></div>
-                    <!-- O ver un video explicativo de 3 min al hacer click en la imagen. -->
-
+                    <!-- O un video corto explicativo de 3 min al hacer click en la imagen. -->
+                    
                 </div>
                 <a href="https://github.com/Hans-Rafael/Henry-Final-project"><img src="/img/Pf.png"
                         alt="pf de henry, e-commerce" /></a>
@@ -155,7 +162,23 @@
             </div>
         </div>
     </section>
-
+    <p>
+        <h3> Otros proyectos </h3>
+    </p>
+    <!-- Carusel de projectos aqui con link a git y un gift como imagen-->
+    <div class ='carrousel'>
+        <div class="grande">
+            <a href ='https://github.com/Hans-Rafael/PI-countries'><b>Crea Actividades Globales</b><img src="img\proyects\LANDING-pais.gif" alt="proyect paises" class="img"></a>
+            <a href ='https://github.com/Hans-Rafael/React-Native-NewsApp/blob/main/appNews.gif'><b>News app (React-Native)</b><img src="img/proyects/appNews.gif" alt="proyect app news" class="img"></a>
+            <a href ='https://github.com/Hans-Rafael/MusicPlayer_Liryks/blob/main/src/assets/LYRIKS.png'><b>MusicPlayer Liryks</b><img src="img\proyects\LYRIKS.png" alt="proyect paises" class="img"></a>
+        </div>
+        <ul class="puntos">
+            <div class="punto activo"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+        </ul>
+    </div>
+<!-- About ME Section -->
     <section id="about">
         <div class="container">
             <h2>About me</h2>
