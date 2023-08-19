@@ -1,33 +1,44 @@
-'use strict'
+"use strict";
 
-const grande = document.querySelector('.grande'); 
-const punto  = document.querySelectorAll('.punto');
-// Cuando CLICK en punto
-    // Saber la posición de ese punto
-    // Aplicar un transform translateX al grande
-    // QUITAR la clase activo de TODOS puntos
-    // AÑADIR la clase activo al punto que hemos hecho CLICK
+///carousel 
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+// current slide counter
+let curSlide = 0;
+// select next slide button right
+const nextSlide = document.querySelector(".btn-next");
+// select prev slide button left
+const prevSlide = document.querySelector(".btn-prev");
 
-punto.forEach((item, index) => {
-    punto[index].addEventListener('click', () => {
-        let posicion = index;
-        const NumImg = 3;
-        let value = (100/NumImg)///valeu  varia numero de imagenes 
-        console.log(index);
-        //operacion = posicion inicial(0%) * -50;
-        let operacion = posicion * - value;//
-        grande.style.transform = `translateX(${operacion}%)`;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+//console.log(maxSlide);
 
-        punto.forEach(punto => punto.classList.remove('activo'));
-        item.classList.add('activo');
-        /* 
-        // Recorremos TODOS los punto
-        punto.forEach( ( cadaPunto , i )=>{
-            // Quitamos la clase ACTIVO a TODOS los punto
-            punto[i].classList.remove('activo')
-        })
-        // Añadir la clase activo en el punto que hemos hecho CLICK
-        punto[i].classList.add('activo')
-         */
-    });
-})
+// add event listener and next slide functionality to right
+nextSlide.addEventListener("click", function () {
+  //curSlide++;
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+// add event listener and navigation functionality to left
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
