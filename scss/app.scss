@@ -6,7 +6,7 @@ $NumImg: 2; //variable del numero de imagenes
     padding:2em;
     //background-color: aqua;
     @include neo( 1 , 1em , 1em );
-    overflow: hidden;
+    //overflow: hidden;
     margin: 2.5rem 0 12rem 2.5rem;
 }
 .carrousel .grande{
@@ -26,6 +26,7 @@ $NumImg: 2; //variable del numero de imagenes
 .carrousel .img{
     width: calc( 100% /$NumImg  - 2em);
     min-height: 10vh;
+    min-width:20vh;
    @include neo( 1 , 1em , 1em );
     display: flex;
     flex-direction: column;

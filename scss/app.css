@@ -35,7 +35,6 @@
   border-radius: 1em;
   background-color: var(--blanco);
   box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  overflow: hidden;
   margin: 2.5rem 0 12rem 2.5rem;
 }
 
@@ -58,6 +57,7 @@
 .carrousel .img {
   width: calc(50% - 2em);
   min-height: 10vh;
+  min-width: 20vh;
   color: var(--negro);
   transition: all 0.4s ease;
   border-radius: 1em;

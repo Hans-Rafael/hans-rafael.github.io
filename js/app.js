@@ -11,8 +11,11 @@ const punto  = document.querySelectorAll('.punto');
 punto.forEach((item, index) => {
     punto[index].addEventListener('click', () => {
         let posicion = index;
+        const NumImg = 3;
+        let value = (100/NumImg)///valeu  varia numero de imagenes 
+        console.log(index);
         //operacion = posicion inicial(0%) * -50;
-        let operacion = posicion * -33;//
+        let operacion = posicion * - value;//
         grande.style.transform = `translateX(${operacion}%)`;
 
         punto.forEach(punto => punto.classList.remove('activo'));
