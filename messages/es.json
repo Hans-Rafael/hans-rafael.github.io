@@ -1,0 +1,18 @@
+{
+  "Index": {
+    "title": "Inicio",
+    "description": "Este es Mi portflio.",
+    "projects": "ject X",
+    "contact": "email.com"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Switch to {locale, select, de {español} en {English} other {Desconocido}}"
+  },
+  "PageLayout": {
+    "pageTitle": "next-intl"
+  },
+  "home": {
+    "title": "Bienvenido a mi portafolio",
+    "description": "Aquí puedes ver mis proyectos"
+  }
+}

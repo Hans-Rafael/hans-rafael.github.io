@@ -1,0 +1,15 @@
+{
+  "Index": {
+    "title": "Home",
+    "description": "This is the home page.",
+    "projects":"project X" ,
+    "contact":"email.com"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Cambiar a {locale, select, es {Español} en {English} other {Unknown}}"
+  },
+  "PageLayout": {
+    "pageTitle": "next-intl"
+  }
+  
+}
