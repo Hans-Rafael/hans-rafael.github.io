@@ -1,18 +1,18 @@
 import {GetStaticPropsContext} from 'next';
 import {useTranslations} from 'next-intl';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
-import PageLayout from '@/components/PageLayout';
-import Header from '@/components/Header';
+import MainLayout from '@/layouts/MainLayout';
+import ProjectsPage from '@/layouts/Projects';
 
 export default function Index() {
   const t = useTranslations('Index');
 
   return (
-    <PageLayout title={t('title')}>
-      <Header/>
+    <MainLayout title={t('title')}>
       <p>{t('description')}</p>
       <LocaleSwitcher />
-    </PageLayout>
+      <ProjectsPage/>
+    </MainLayout>
   );
 }
 

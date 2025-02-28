@@ -8,8 +8,11 @@
   "LocaleSwitcher": {
     "switchLocale": "Cambiar a {locale, select, es {Español} en {English} other {Unknown}}"
   },
-  "PageLayout": {
-    "pageTitle": "next-intl"
+  "MainLayout": {
+    "pageTitle": "Hans-portflio"
+  },
+  "Footer": {
+    "copyright": "© 2025 All rights reserved."
   }
   
 }

@@ -8,11 +8,14 @@
   "LocaleSwitcher": {
     "switchLocale": "Switch to {locale, select, de {español} en {English} other {Desconocido}}"
   },
-  "PageLayout": {
-    "pageTitle": "next-intl"
+  "MainLayout": {
+    "pageTitle": "Hans-portflio"
   },
   "home": {
     "title": "Bienvenido a mi portafolio",
     "description": "Aquí puedes ver mis proyectos"
+  },
+  "Footer": {
+    "copyright": "© 2025 Todos los derechos reservados."
   }
 }
