@@ -98,7 +98,7 @@ p {
   opacity: 0.8;
 }
 
-/* 📱 Responsive para pantallas grandes */
+/* Responsive para pantallas grandes */
 @media (min-width: 600px) {
   .social-links {
     flex-direction : row;
