@@ -7,10 +7,10 @@ export default function App() {
     <div className="card">
       <Avatar />
       <div className="data">
-        <h1>Hans Rafael</h1>
+        <h1>Hans Garcia</h1>
         {/* <div className="row">
           <h3>Desarrollador Full Stack | Blockchain | Docker</h3> */}
-        <p>Desarrollador Full Stack | Blockchain | Docker</p>
+        <p>Full Stack Developer | Blockchain | Docker</p>
         {/* </div> */}
         <SocialLinks />
       </div>
