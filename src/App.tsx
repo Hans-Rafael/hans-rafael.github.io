@@ -1,25 +1,19 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Avatar from "./components/Avatar";
+import SocialLinks from "./components/SocialLinks";
+import "./assets/styles.css";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <h1>Hans Rafael</h1>
+        {/* <div className="row">
+          <h3>Desarrollador Full Stack | Blockchain | Docker</h3> */}
+        <p>Desarrollador Full Stack | Blockchain | Docker</p>
+        {/* </div> */}
+        <SocialLinks />
       </div>
-      <h1>Hans Garcia</h1>
-      
-    </>
+    </div>
   );
 }
-
-export default App;
