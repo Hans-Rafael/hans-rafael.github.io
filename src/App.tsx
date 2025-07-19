@@ -8,7 +8,7 @@ export default function App() {
       <Avatar />
       <div className="data">
         <h1>Hans Garcia</h1>
-        <p>Full Stack Developer - Blockchain - UX Designer</p>
+        <p>Full Stack Developer - Blockchain - UX/UI Designer</p>
         <SocialLinks />
       </div>
     </div>
