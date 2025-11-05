@@ -5,7 +5,7 @@ export default function SocialLinks() {
       <a href="https://linkedin.com/in/hans-garcia-developer" target="_blank">LinkedIn</a>
       <a href="https://gist.github.com/Hans-Rafael " target="_blank">GistHub</a>
       <a href="https://www.behance.net/hans_garcia " target="_blank" rel="noopener noreferrer" className="behance-btn">Behance</a>
-      <a href="mailto:hansgarcia@tutamail.com" className="email-btn">Email</a>
+      <a href="mailto:hansgarcia@tutamail.com?subject=Contacto%20desde%20tu%20portafolio" className="email-btn" target="_blank" rel="noopener noreferrer">Email</a>
     </div>
   );
 }
