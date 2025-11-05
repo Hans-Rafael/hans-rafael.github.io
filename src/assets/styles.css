@@ -107,6 +107,11 @@ p {
 .social-links .email-btn {
   background-color: #e74c3c !important;
   color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
 }
 
 .social-links a:hover {
