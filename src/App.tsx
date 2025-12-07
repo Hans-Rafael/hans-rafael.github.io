@@ -40,7 +40,7 @@ export default function App() {
       <div className="contact">
         <h3>Contact me</h3>
         <div className="contact-buttons">
-          <a href="https://linkedin.com/in/hans-garcia-developer" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/hans-developer" target="_blank">LinkedIn</a>
           <a href="mailto:hansgarcia@tutamail.com" onClick={handleEmail} className="email-btn">Email</a>
         </div>
       </div>
