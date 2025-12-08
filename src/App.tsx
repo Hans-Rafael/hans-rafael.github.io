@@ -33,7 +33,7 @@ export default function App() {
         
         <div className="role-row">
           <p>Tester QA</p>
-          <a href="#" target="_blank" className="qa-btn">QA Projects</a>
+          <a href="https://github.com/Hans-Rafael/QA-Projects" target="_blank" className="qa-btn">QA Projects</a>
         </div>
       </div>
       
