@@ -4,7 +4,7 @@ import "./assets/styles.css";
 export default function App() {
   const handleEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const email = 'hansgarcia@tutamail.com';
+    const email = 'contact@hans-rafael.dev';
     window.location.href = `mailto:${email}`;
     setTimeout(() => {
       navigator.clipboard.writeText(email);
@@ -28,7 +28,7 @@ export default function App() {
         
         <div className="role-row">
           <p>UX/UI Web and Mobile Designer</p>
-          <a href="https://www.behance.net/hans_garcia" target="_blank" className="behance-btn">Behance Projects</a>
+          <a href="https://www.behance.net/hans-rafael" target="_blank" className="behance-btn">Behance Projects</a>
         </div>
         
         <div className="role-row">
@@ -41,7 +41,7 @@ export default function App() {
         <h3>Contact me</h3>
         <div className="contact-buttons">
           <a href="https://www.linkedin.com/in/hans-developer" target="_blank">LinkedIn</a>
-          <a href="mailto:hansgarcia@tutamail.com" onClick={handleEmail} className="email-btn">Email</a>
+          <a href="mailto:contact@hans-rafael.dev" onClick={handleEmail} className="email-btn">Email</a>
         </div>
       </div>
     </div>
