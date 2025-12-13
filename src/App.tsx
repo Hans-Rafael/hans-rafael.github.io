@@ -8,7 +8,11 @@ export default function App() {
     window.location.href = `mailto:${email}`;
     setTimeout(() => {
       navigator.clipboard.writeText(email);
-      alert('Email copiado al portapapeles!');
+      const div = document.createElement('div');
+      div.textContent = 'Email copiado al portapapeles!';
+      div.style.cssText = 'position:fixed;top:20px;right:20px;background:#4CAF50;color:white;padding:12px 20px;border-radius:4px;z-index:1000;font-family:Arial,sans-serif';
+      document.body.appendChild(div);
+      setTimeout(() => div.remove(), 3000);
     }, 1000);
   };
 
