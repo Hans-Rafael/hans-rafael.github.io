@@ -42,7 +42,7 @@ export default function App() {
   const [lang, setLang] = useState<Lang>(initialLang);
   const [theme, setTheme] = useState<Theme>(initialTheme);
   const [flipped, setFlipped] = useState(false);
-  const [toast, setToast] = useState('');
+  const [toast, setToast] = useState({ msg: '', show: false, error: false });
   const toastTimer = useRef<number | undefined>(undefined);
   const t = content[lang];
 
@@ -56,14 +56,18 @@ export default function App() {
     safeSet('theme', theme);
   }, [theme]);
 
+  const notify = (msg: string, error = false) => {
+    setToast({ msg, show: true, error });
+    window.clearTimeout(toastTimer.current);
+    toastTimer.current = window.setTimeout(() => setToast((x) => ({ ...x, show: false })), 3200);
+  };
+
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(EMAIL);
-      setToast(t.copied);
-      window.clearTimeout(toastTimer.current);
-      toastTimer.current = window.setTimeout(() => setToast(''), 2800);
+      notify(t.copied);
     } catch {
-      /* sin permiso de portapapeles: el enlace mailto sigue funcionando */
+      notify(`${t.copyFail} ${EMAIL}`, true);
     }
   };
 
@@ -96,36 +100,55 @@ export default function App() {
       <main className="page">
         <section className="stage" aria-label={t.name}>
           <div className="cardwrap">
-          <button
-            type="button"
-            className={`card3d${flipped ? ' is-flipped' : ''}`}
-            onClick={() => setFlipped(!flipped)}
-            aria-pressed={flipped}
-            aria-label={`${t.name} — ${t.flip}`}
-          >
-            <span className="face face--front" aria-hidden={flipped}>
-              <Avatar alt="" />
-              <span className="front-text">
-                <span className="name">{t.name}</span>
-                <span className="roles">
-                  {t.roles.map((r) => (
-                    <span key={r}>{r}</span>
-                  ))}
+            <div className={`card3d${flipped ? ' is-flipped' : ''}`}>
+              <div className="face face--front" inert={flipped}>
+                <button type="button" className="flip" onClick={() => setFlipped(true)} aria-label={`${t.name} — ${t.flip}`} />
+                <Avatar alt="" />
+                <span className="front-text">
+                  <span className="name">{t.name}</span>
+                  <span className="roles">
+                    {t.roles.map((r) => (
+                      <span key={r}>{r}</span>
+                    ))}
+                  </span>
                 </span>
-              </span>
-              <span className="status"><i aria-hidden="true" />{t.status}</span>
-            </span>
+                <span className="status"><i aria-hidden="true" />{t.status}</span>
+              </div>
 
-            <span className="face face--back" aria-hidden={!flipped}>
-              <span className="back-label">{t.back}</span>
-              <span className="back-line">{EMAIL}</span>
-              <span className="back-line">{t.location}</span>
-              <span className="back-line">{t.languages}</span>
-              <span className="mono" aria-hidden="true">HG</span>
-            </span>
-          </button>
+              <div className="face face--back" inert={!flipped} onClick={() => setFlipped(false)}>
+                <span className="back-label">{t.back}</span>
+                <button
+                  type="button"
+                  className="back-email"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    copyEmail();
+                  }}
+                  aria-label={`${t.copyEmailAria}: ${EMAIL}`}
+                >
+                  {EMAIL}
+                  <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <rect x="7" y="7" width="9" height="9" rx="2" fill="none" stroke="currentColor" strokeWidth="1.6" />
+                    <path d="M13 4.5V4a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h.5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                  </svg>
+                </button>
+                <span className="back-line">{t.location}</span>
+                <span className="back-line">{t.languages}</span>
+                <span className="mono" aria-hidden="true">HG</span>
+                <button
+                  type="button"
+                  className="flip-back"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setFlipped(false);
+                  }}
+                >
+                  ↺ {t.flipBack}
+                </button>
+              </div>
+            </div>
           </div>
-          <p className="hint">{t.flipHint}</p>
+          <p className="hint">{flipped ? t.copyHint : t.flipHint}</p>
         </section>
 
         <section className="links" id="links">
@@ -170,7 +193,16 @@ export default function App() {
         <p className="foot">{t.footer}</p>
       </main>
 
-      <div className="toast" role="status" aria-live="polite">{toast}</div>
+      <div className={`toast${toast.show ? ' is-visible' : ''}${toast.error ? ' is-error' : ''}`} role="status" aria-live="polite">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+          {toast.error ? (
+            <path d="M10 5.5v5m0 3.2v.1" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          ) : (
+            <path d="m5 10.5 3.2 3.2L15 6.8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          )}
+        </svg>
+        <span>{toast.msg}</span>
+      </div>
     </>
   );
 }

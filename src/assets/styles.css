@@ -145,13 +145,7 @@ a {
   display: block;
   width: 100%;
   aspect-ratio: 7 / 4;
-  padding: 0;
-  border: 0;
-  background: none;
-  font: inherit;
-  color: inherit;
   text-align: left;
-  cursor: pointer;
   transform-style: preserve-3d;
   transition: transform 0.7s cubic-bezier(0.3, 0.7, 0.2, 1);
   border-radius: 14px;
@@ -159,7 +153,7 @@ a {
 .card3d.is-flipped {
   transform: rotateY(180deg);
 }
-.card3d:hover:not(.is-flipped) {
+.card3d:has(.flip:hover):not(.is-flipped) {
   transform: rotateY(-6deg) rotateX(3deg);
 }
 
@@ -286,6 +280,71 @@ a {
   margin: 14px 0 0;
   font-size: 0.8125rem;
   color: var(--muted);
+}
+
+/* Botón invisible que cubre el frente */
+.flip {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  cursor: pointer;
+}
+.face--back {
+  cursor: pointer;
+}
+
+.back-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 2cqw;
+  align-self: flex-start;
+  margin: 0 0 0 -2cqw;
+  padding: 1.2cqw 2cqw;
+  font: inherit;
+  font-size: 3.6cqw;
+  line-height: 1.3;
+  color: inherit;
+  background: transparent;
+  border: 1px dashed rgba(244, 239, 230, 0.35);
+  border-radius: 8px;
+  cursor: copy;
+  transition: background 0.2s, border-color 0.2s;
+}
+.back-email svg {
+  width: 3.8cqw;
+  height: 3.8cqw;
+  color: #f08a5d;
+  flex: none;
+}
+.back-email:hover,
+.back-email:focus-visible {
+  background: rgba(244, 239, 230, 0.1);
+  border-color: #f08a5d;
+}
+
+.flip-back {
+  position: absolute;
+  right: 5cqw;
+  top: 4.5cqw;
+  font: 500 2.6cqw/1 var(--sans);
+  color: rgba(244, 239, 230, 0.7);
+  background: transparent;
+  border: 0;
+  padding: 1.2cqw 1.6cqw;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.flip-back:hover {
+  color: #f4efe6;
+}
+.face--back :focus-visible {
+  outline-color: #f08a5d;
 }
 
 /* ---------- Links ---------- */
@@ -431,21 +490,43 @@ h2 {
 .toast {
   position: fixed;
   left: 50%;
-  bottom: 24px;
-  transform: translate(-50%, 20px);
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 12px 18px 12px 14px;
   background: var(--ink);
   color: var(--paper);
-  padding: 11px 18px;
-  border-radius: 10px;
+  border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 500;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.45);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s;
+  transform: translate(-50%, 16px) scale(0.96);
+  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.28s;
 }
-.toast:not(:empty) {
+.toast svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 50%;
+  background: #2f9e62;
+  color: #fff;
+}
+.toast.is-error svg {
+  background: #d9534f;
+}
+.toast.is-visible {
   opacity: 1;
-  transform: translate(-50%, 0);
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+  transition-delay: 0s;
 }
 
 @media (max-width: 520px) {
@@ -461,7 +542,7 @@ h2 {
     animation: none !important;
     transition: none !important;
   }
-  .card3d:hover:not(.is-flipped) {
+  .card3d:has(.flip:hover):not(.is-flipped) {
     transform: none;
   }
 }
