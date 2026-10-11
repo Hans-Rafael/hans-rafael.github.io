@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Avatar from './components/Avatar';
-import { content, EMAIL, links, stack, type Lang } from './content';
+import { content, EMAIL, links, projects, stack, type Lang } from './content';
 import './assets/styles.css';
 
 type Theme = 'light' | 'dark';
@@ -92,6 +92,11 @@ export default function App() {
               <p className="eyebrow">{t.letterLabel}</p>
               <h1 id="name">{t.name}</h1>
               <p className="roles">{t.roles}</p>
+              <ul className="facts">
+                {t.facts.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
             </div>
           </header>
 
@@ -118,6 +123,50 @@ export default function App() {
                       </a>
                     )}
                   </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section aria-labelledby="projects">
+            <h2 id="projects">{t.projectsTitle}</h2>
+            <p className="body lead">{t.projectsIntro}</p>
+            <ul className="projects">
+              {projects.map((p) => {
+                const item = t.projectItems[p.key];
+                return (
+                  <li key={p.key} className="project">
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                    <ul className="tech" aria-label="Stack">
+                      {p.tech.map((x) => (
+                        <li key={x}>{x}</li>
+                      ))}
+                    </ul>
+                    <div className="area-links">
+                      <a href={p.repo} {...ext}>
+                        {t.repoLabel} <Arrow /><span className="sr">{t.external}</span>
+                      </a>
+                      {'demo' in p && (
+                        <a href={p.demo} {...ext}>
+                          {t.demoLabel} <Arrow /><span className="sr">{t.external}</span>
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+
+          <section aria-labelledby="results">
+            <h2 id="results">{t.resultsTitle}</h2>
+            <p className="body lead">{t.now}</p>
+            <ul className="results">
+              {t.results.map((r) => (
+                <li key={r.n}>
+                  <strong>{r.n}</strong>
+                  <span>{r.l}</span>
                 </li>
               ))}
             </ul>
